@@ -1,0 +1,319 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+
+.row,
+.col-12,
+p{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 20px;
+    padding-left: 15px;
+    color: #fff;
+    padding-top: 10px;
+}
+
+h1 span{
+    display: block;
+}
+
+/* PAGINA INICIO*/
+
+/* MENU NAVEGADOR TOP */
+
+.nav-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    height: 10vh;
+}
+
+.logo{
+    margin-left: 50px;
+    width: 50px;
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 320px;
+    color: #fff;
+}
+
+.calendario,
+.agregar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.calendario img{
+    width: 23px;
+    height: 23px;
+}
+
+.agregar img{
+    width: 20px;
+    height: 20px;
+}
+
+.topCalendario{
+    text-decoration: none;
+    color: #fff;
+}
+
+.topCalendario:hover{
+    color: #e80681;
+    text-decoration: none;
+}
+
+.dropdown-toggle{
+    padding: 0;
+}
+
+.dropdown-toggle:hover{
+    color: #e80681;
+}
+
+.dropdown-item a{
+    color: #000;
+    text-decoration: none;
+}
+
+.dropdown-item a:hover{
+    color: #e80681;
+    text-decoration: none;
+}
+
+.perfil{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.perfil img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.perfil p{
+    margin-right: 10px;
+}
+
+.iconProfile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* MENU NAV ASIDE */
+
+.menu-nav-aside{
+    background: #000;
+    height: 90vh;
+    border-top: 1px solid white;
+}
+
+.menu-nav-aside nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-nav-aside nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 25px;
+    width: 100%;
+}
+
+.menu-nav-aside nav a:first-child{
+    margin-top: 40px;
+}
+
+.menu-nav-aside nav a:hover{
+    background: #fff;
+    color: #000;
+}
+
+#ocultar,
+#ocultarOs{
+    display: none;
+    font-size: 14px;
+}
+
+nav a:link,
+nav a:visited {
+    color: #ffffff;
+}
+
+nav a.current:link, 
+nav a.current:visited {
+    color: rgb(0, 0, 0);
+    background-color: #f1f0f0;
+    border-left: 3px solid #e80681;
+    border-right: 3px solid #e80681;
+}
+
+nav a.currentDos:link, 
+nav a.currentDos:visited {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-left: 3px solid #e80681;
+    border-right: 3px solid  #e80681;
+}
+
+/* BOTONES */
+
+.botones-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botones-top{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 110px;
+}
+
+.botones-bottom{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0px;
+}
+
+.version{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* PAGINA CARGAR_PACIENTE*/
+
+.tituloPacienteNuevo{
+    margin-left: 50px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+.cargarPacienteLeft{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.formularioPacientes{
+    margin: 0 auto;
+    text-align: center;
+    margin-right: 150px;
+    padding-top: 30px;
+}
+.formularioPacientes input{
+    width: 40%;
+    height: 30px;
+    margin: 10px 0;
+}
+.formularioPacientes select{
+    width: 40%;
+    height: 30px;
+}
+.formularioPacientes textarea{
+    width: 80%;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.boton{
+    width: 150px!important;
+    /* background: #949494;
+    color: #000;
+    border: 1px solid black; */
+    border-radius: 5px;
+    padding-bottom: 28px;
+}
+
+/* PAGINA BUSCAR_PACIENTE*/
+
+.buscarPacientes h2,
+.buscarOS h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.buscarPacientes input,
+.buscarOS input{
+    display: block;
+    width: 600px;
+    height: 30px;
+    margin: 15px auto;
+}
+
+.buscarPacientes select,
+.buscarOS select{
+    display: block;
+    width: 600px;
+    height: 30px;
+    margin: 10px auto;
+    margin-top: 100px;
+}
+
+.separarInput{
+    margin-top: 35px;
+}
+
+/* PAGINA CARGAR_OS*/
+
+.buscarOS{
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 40px;
+}
+
+.files{
+    width: 90%;
+}
+
+.formularioOS{
+    margin: 0 auto;
+    text-align: center;
+    margin-right: 150px;
+    padding-top: 30px;
+}
+.formularioOS input{
+    width: 40%;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.formOsTerceraLinea input{
+    width: 80%;
+}
+
+.formOsCuartaLinea input{
+    width: 80%;
+}
+
+.formOsQuintaLinea textarea{
+    width: 80%;
+    min-height: 50px;
+    max-height: 100px;
+}
+
+/* PAGINA BUSCAR_OS*/
+
