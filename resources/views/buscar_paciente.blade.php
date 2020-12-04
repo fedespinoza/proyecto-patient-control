@@ -5,7 +5,7 @@
 @section('content')
     <div class="col-9 buscarPacientes">
         <h2>Buscar Pacientes</h2>
-        <form action="" method="post">
+    <form action="{{route('patient.show', $paciente->all())}}" method="get">
             <select name="" id="">
                 <option value="">-- Seleccionar --</option>
                 @foreach ($paciente as $pat)

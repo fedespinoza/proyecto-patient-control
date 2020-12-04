@@ -65,4 +65,11 @@ class SinglePatientController extends Controller
         $pax->save();
         return redirect()->route('patient.show', $pax);
     }
+
+    public function destroy($id) {
+        $pax = Patient::find($id);
+        $pax->delete();
+        return redirect()->route('patient.create', $pax);
+        // return view('cualquier.vista');  
+    }
 }

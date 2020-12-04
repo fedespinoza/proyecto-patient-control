@@ -13,17 +13,6 @@
             <li><a href="{{route('patient.show', $pat->id)}}">{{$pat->nombre}}</a></li>
         @endforeach
     </ul>
-
-    <form action="{{route('patient.show', $pat->id)}}">
-        <select name="" id="">
-            @foreach ($paciente as $pat)
-                <option value="">{{$pat->nombre}}</option>
-            @endforeach
-        </select>
-        <button type="submit">Buscar</button>
-    </form>
-
-
 </div>
 
 {{-- <div class="col-9">

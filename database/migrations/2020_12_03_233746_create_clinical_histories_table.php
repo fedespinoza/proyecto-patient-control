@@ -21,7 +21,7 @@ class CreateClinicalHistoriesTable extends Migration
             $table->unsignedBigInteger('id_paciente');
             $table->timestamps();
 
-            // $table->foreign('id_paciente')->references('id')->on('patients')->onDelete('cascade');
+            $table->foreign('id_paciente')->references('id')->on('patients')->onDelete('cascade');
             $table->foreign('id_profesional')->references('id')->on('professionals')->onDelete('cascade');
         });
     }

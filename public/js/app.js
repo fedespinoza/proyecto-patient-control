@@ -10,5 +10,4 @@ $(document).ready(function(){
       $("a#ocultarOs").toggle(600);
       $("a#ocultar").hide(600);
     });
-
 });

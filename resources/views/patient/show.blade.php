@@ -13,5 +13,10 @@
         <h2>Foto: {{$pax->foto}}</h2>
 
         <a href="{{route('patient.edit', $pax)}}">Editar persona</a>
+        <form action="{{route('patient.destroy', $pax)}}" method="POST">
+            @csrf
+            @method('delete')
+             <button type="submit">Eliminar</button>
+        </form>
     </div>
 @endsection

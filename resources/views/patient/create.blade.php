@@ -6,8 +6,8 @@
 <div class="col-9">
     <h2 class="tituloPacienteNuevo">Agregar paciente nuevo</h2>
     <div class="row">
-        {{-- <div class="col-3 cargarPacienteLeft d-flex justify-content-around align-items-start flex-column">
-            <img src="iconos/user.png" alt="perfil-foto">
+        <div class="col-3 cargarPacienteLeft d-flex justify-content-around align-items-start flex-column">
+            <img src="{{URL::asset('iconos/user.png')}}" alt="perfil-foto">
             <div class="subirFoto d-flex flex-column align-items-center">
                 <form action="" method="POST">
                     <label for="">Adjuntar Foto</label>
@@ -19,7 +19,7 @@
             <a href="#">Cargar Facturas</a>
             <a href="#">Cargar Recibo</a>
             <a href="#">Presupuestos</a>
-        </div> --}}
+        </div>
         <div class="col-6 formularioPacientes">
             <form action="{{route('patient.store')}}" method="POST">
                 @csrf

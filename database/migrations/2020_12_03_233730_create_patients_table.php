@@ -24,10 +24,10 @@ class CreatePatientsTable extends Migration
             $table->integer('afiliado')->nullable();
             $table->string('diagnostico')->nullable();
             $table->string('foto')->nullable();
-            // $table->unsignedBigInteger('id_obra');
+            $table->unsignedBigInteger('id_obra')->nullable();
             $table->timestamps();
 
-            // $table->foreign('id_obra')->references('id')->on('work_socials')->onDelete('cascade');
+            $table->foreign('id_obra')->references('id')->on('work_socials')->onDelete('cascade');
         });
     }
 

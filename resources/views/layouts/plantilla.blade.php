@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="fotos/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    {{-- <link rel="stylesheet" href="css/styles.css"> --}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <title>@yield('title')</title>
 </head>
 <body>
@@ -17,16 +18,16 @@
         <div class="row">
             <div class="col-12 nav-top">
                 <div class="logoTitulo d-flex align-items-center">
-                    <a href="{{route('home')}}"><img src="fotos/logo.png" alt="logo" class="logo"></a>
+                    <a href="{{route('home')}}"><img src="{{URL::asset('fotos/logo.png')}}" alt="logo" class="logo"></a>
                     <h1>PATIENT <span>CONTROL</span></h1>
                 </div>
                 <div class="iconos">
                     <div class="calendario">
-                        <img src="iconos/calendar.png" alt="calendario">
+                        <img src="{{URL::asset('iconos/calendar.png')}}" alt="calendario">
                         <a href="" class="topCalendario">Calendario</a>
                     </div>
                     <div class="agregar">
-                        <img src="iconos/add.png" alt="agregar">
+                        <img src="{{URL::asset('iconos/add.png')}}" alt="agregar">
                         <div class="dropdown">
                             <button class="btn text-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agregar</button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -52,7 +53,7 @@
                                     Hola, {{ Auth::user()->name }}
                                 </a>
                                 <div class="iconProfile pl-2">
-                                    <img src="iconos/woman.png" alt="perfil">
+                                    <img src="{{URL::asset('iconos/woman.png')}}" alt="perfil">
                                 </div>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -79,7 +80,7 @@
                 <nav>
                     <a href="{{ route('home') }}" class="{{request()->routeIs('home') ? 'current' : ''}}">INICIO</a>
                     <a href="#" id="show" class="{{request()->routeIs('agregar-paciente', 'buscar-paciente') ? 'current' : ''}}">PACIENTES</a>
-                    <a href="{{ route('agregar-paciente') }}" id="ocultar" class="{{request()->routeIs('agregar-paciente') ? 'current' : ''}}">Agregar Paciente</a>
+                    <a href="{{ route('patient.create') }}" id="ocultar" class="{{request()->routeIs('patient.create') ? 'current' : ''}}">Agregar Paciente</a>
                     <a href="{{ route('buscar-paciente') }}" id="ocultar" class="{{request()->routeIs('buscar-paciente') ? 'current' : ''}}">Buscar Paciente</a>
                     <a href="#" id="showOs" class="{{request()->routeIs('agregar-obra-social', 'buscar-obra-social') ? 'current' : ''}}">OBRAS SOCIALES</a>
                     <a href="{{ route('agregar-obra-social') }}" id="ocultarOs" class="{{request()->routeIs('agregar-obra-social') ? 'current' : ''}}">Agregar Obra Social</a>
@@ -99,6 +100,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+    <script src="{{URL::asset('js/app.js')}}"></script>
 </body>
 </html>
