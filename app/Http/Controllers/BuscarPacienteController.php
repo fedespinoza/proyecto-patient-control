@@ -9,7 +9,8 @@ class BuscarPacienteController extends Controller
 {
     public function __invoke()
     {
+        // $buscarpor=$request->get('buscarpor');
         $paciente = Patient::all();
-        return view('buscar_paciente', compact('paciente'));
+        return view('buscar-paciente', compact('paciente'));
     }
 }

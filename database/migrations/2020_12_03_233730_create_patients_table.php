@@ -23,7 +23,6 @@ class CreatePatientsTable extends Migration
             $table->integer('dni')->nullable();
             $table->integer('afiliado')->nullable();
             $table->string('diagnostico')->nullable();
-            $table->string('foto')->nullable();
             $table->unsignedBigInteger('id_obra')->nullable();
             $table->timestamps();
 

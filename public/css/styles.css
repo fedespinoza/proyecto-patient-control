@@ -248,6 +248,14 @@ nav a.currentDos:visited {
     padding-bottom: 28px;
 }
 
+.cargarPacienteLeft a:first-child{
+    padding-top: 50px;
+}
+
+.cargarPacienteLeft a{
+    padding: 10px;
+}
+
 /* PAGINA BUSCAR_PACIENTE*/
 
 .buscarPacientes h2,
@@ -315,5 +323,111 @@ nav a.currentDos:visited {
     max-height: 100px;
 }
 
-/* PAGINA BUSCAR_OS*/
+/* PAGINA SHOW*/
+
+.contentShow{
+    width: 60%;
+    display: flex;
+}
+
+.tituloShow{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 35px;
+}
+
+.muestraDos{
+    margin-left: 30%;
+}
+
+.muestraUno h2,
+.muestraDos h2{
+    padding-top: 40px;
+    font-size: 26px;
+}
+
+.diagnostico{
+    font-size: 26px;
+    padding-top: 20px;
+    width: 60%;
+}
+
+.botones{
+    padding-top: 50px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botonEditar{
+    padding: 10px 15px;
+    background-color: #E0A800;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.botonEditar:hover{
+    background-color: #b98b00;
+    text-decoration: none;
+    color: #000;
+}
+
+.botonEliminar{
+    padding: 10px 15px;
+    background-color: #E0A800;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+}
+
+.botonEliminar:hover{
+    background-color: #b98b00;
+    text-decoration: none;
+    color: #000;
+}
+
+.botones{
+    margin: 0 15px;
+}
+
+/*PATIENTS INDEX*/
+
+.pacientesDiv{
+    width: 900px;
+    max-height: 500px;
+    background-color: #dbdbdb;
+}
+
+.pacienteSolo{
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.pacientesDiv:first-child,
+.pacientesDiv:last-child{
+    padding: 15px 0;
+}
+
+.pacienteSolo a{
+    color: #000;
+}
+
+.page-item{
+    color: darkgreen;
+}
+
+.gestionPacientes{
+    font-size: 2em;
+    margin: 40px 0;
+    padding: 0;
+}
+
 

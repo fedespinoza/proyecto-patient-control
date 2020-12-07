@@ -36,7 +36,7 @@
             <a href="#" alt=""><img src="botones/btn3.png" alt="reuniones"></a>
         </div>
         <div class="botones-bottom">
-            <a href="{{route('buscar-paciente')}}" alt=""><img src="botones/btn4.png" alt="buscar-paciente"></a>
+            <a href="{{route('patient.index')}}" alt=""><img src="botones/btn4.png" alt="buscar-paciente"></a>
             <a href="{{route('buscar-obra-social')}}" alt=""><img src="botones/btn5.png" alt="buscar-obra-social"></a>
         </div>
         <div class="version">

@@ -4,11 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\Patient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SinglePatientController extends Controller
 {
-    public function index(){
-        return view('patient/patient');
+    public function index(Request $request){
+        // if($request){
+        //     $buscarpor = $request->get('buscarpor');
+        //     $paciente = Patient::where('nombre','LIKE','%' . $buscarpor . '%');
+        //     return view('patient/index', compact('paciente', 'buscarpor'));
+        //     $paciente = Patient::find($id);
+        // }
+        $texto=trim($request->get('texto'));
+        $paciente =DB::table('patients')
+                    ->select('id', 'nombre','apellido', 'dni', 'afiliado')
+                    ->where('nombre', 'LIKE', '%'.$texto.'%')
+                    ->orWhere('apellido', 'LIKE', '%'.$texto.'%')
+                    ->orderBy('apellido', 'asc')
+                    ->paginate(8);
+        return view('patient.index', compact('paciente', 'texto'));
     }
 
     public function create(){
