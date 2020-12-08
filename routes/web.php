@@ -7,6 +7,7 @@ use App\Http\Controllers\BuscarPacienteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\SinglePatientController;
+use App\Http\Controllers\WorkSocialController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +32,6 @@ Route::get('buscar-obra-social', BuscarObraSocialController::class)->name('busca
 Route::get('agregar-paciente', AgregarPacienteController::class)->name('agregar-paciente')->middleware('auth');
 Route::get('agregar-obra-social', AgregarObraSocialController::class)->name('agregar-obra-social')->middleware('auth');
 Route::get('paciente', PacienteController::class)->name('paciente')->middleware('auth');
-// Route::get('patient', [SinglePatientController::class, 'index'])->name('patient');
-// Route::get('patient/create', [SinglePatientController::class, 'create'])->name('patient');
-// Route::get('patient/{pax}', [SinglePatientController::class, 'show'])->name('patient');
-Route::resource('patient', SinglePatientController::class);
+
+Route::resource('patient', SinglePatientController::class)->middleware('auth');
+Route::resource('os', WorkSocialController::class)->middleware('auth');

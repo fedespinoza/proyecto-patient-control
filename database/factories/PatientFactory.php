@@ -29,7 +29,6 @@ class PatientFactory extends Factory
             'escuela' => $this->faker->company(),
             'dni' => $this->faker->numberBetween($min = 100000, $max = 500000),
             'afiliado' => $this->faker->numberBetween($min = 500, $max = 18000),
-            'foto' => $this->faker->imageUrl($width = 640, $height = 480),
             'diagnostico' => $this->faker->sentence()
         ];
     }

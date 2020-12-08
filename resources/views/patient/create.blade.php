@@ -4,15 +4,9 @@
     
 @section('content')
 <div class="col-9">
-    <h2 class="tituloPacienteNuevo">Agregar paciente nuevo</h2>
+    <h2 class="buscarOS">Agregar paciente nuevo</h2>
     <div class="row">
-        <div class="col-2 cargarPacienteLeft d-flex justify-content-start align-items-start flex-column">            
-            <a href="#">Informes</a>
-            <a href="#">Cargar Facturas</a>
-            <a href="#">Cargar Recibo</a>
-            <a href="#">Presupuestos</a>
-        </div>
-        <div class="col-7 formularioPacientes">
+        <div class="col-9 formularioPacientes">
             <form action="{{route('patient.store')}}" method="POST">
                 @csrf
                 <div class="formPrimeraLinea">
@@ -21,14 +15,19 @@
                 </div>
                 <div class="formSegundaLinea">
                     <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de Nacimiento">
-                    <input type="number" name="telefono" placeholder="telefono">
+                    <input type="number" name="telefono" placeholder="Teléfono">
                 </div>
                 <div class="formTerceraLinea">
                     <input type="number" name="dni" id="" placeholder="DNI">
                     <input type="text" name="escuela" id="" placeholder="Escuela">
                 </div>
                 <div class="formCuartaLinea">
-                    <input type="text" name="obraSocial" id="" placeholder="Obra Social">
+                    <select name="id_obra" id="">
+                        <option value="">-- Seleccionar --</option>
+                        @foreach ($obra as $os)
+                            <option value="">{{$os->nombre}}</option>
+                        @endforeach
+                    </select>
                     <input type="number" name="afiliado" id="" placeholder="N° Afiliado">
                 </div>
                 <div class="formQuintaLinea">

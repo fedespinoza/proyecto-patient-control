@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Patient extends Model
 {
     use HasFactory;
+
+    public function worksocial(){
+        return $this->hasMany('App\Models\WorkSocial');
+    }
 }
+
+

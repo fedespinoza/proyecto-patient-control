@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Patient;
+use App\Models\WorkSocial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -26,7 +27,8 @@ class SinglePatientController extends Controller
     }
 
     public function create(){
-        return view('patient/create');
+        $obra = WorkSocial::all();
+        return view('patient.create', compact('obra'));
     }
 
     public function store(Request $request){
@@ -39,9 +41,8 @@ class SinglePatientController extends Controller
         $patient->escuela = $request->escuela;
         $patient->dni = $request->dni;
         // $patient->terapias = $request->terapias;
-        // $patient->obraSocial = $request->obraSobraSocialocial;
+        // $patient->id_obra = $request->id_obra;
         $patient->afiliado = $request->afiliado;
-        $patient->foto = $request->foto;
         $patient->diagnostico = $request->diagnostico;
 
         $patient->save();
@@ -71,9 +72,8 @@ class SinglePatientController extends Controller
         $pax->escuela = $request->escuela;
         $pax->dni = $request->dni;
         // $patient->terapias = $request->terapias;
-        // $patient->obraSocial = $request->obraSobraSocialocial;
+        // $pax->id_obra = $request->id_obra;
         $pax->afiliado = $request->afiliado;
-        $pax->foto = $request->foto;
         $pax->diagnostico = $request->diagnostico;
 
         $pax->save();
@@ -83,7 +83,7 @@ class SinglePatientController extends Controller
     public function destroy($id) {
         $pax = Patient::find($id);
         $pax->delete();
-        return redirect()->route('patient.create', $pax);
+        return redirect()->route('patient.index', $pax);
         // return view('cualquier.vista');  
     }
 }

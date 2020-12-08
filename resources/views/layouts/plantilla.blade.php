@@ -31,8 +31,8 @@
                         <div class="dropdown">
                             <button class="btn text-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agregar</button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                              <button class="dropdown-item" type="button"><a href="{{route('agregar-paciente')}}"> Cargar Paciente</a></button>
-                              <button class="dropdown-item" type="button"><a href="{{route('agregar-obra-social')}}"> Cargar Obra Social</a></button>
+                              <button class="dropdown-item" type="button"><a href="{{ route('patient.create') }}"> Cargar Paciente</a></button>
+                              <button class="dropdown-item" type="button"><a href="{{route('os.create')}}"> Cargar Obra Social</a></button>
                             </div>
                           </div>
                     </div>
@@ -79,12 +79,12 @@
             <div class="col-3 menu-nav-aside">
                 <nav>
                     <a href="{{ route('home') }}" class="{{request()->routeIs('home') ? 'current' : ''}}">INICIO</a>
-                    <a href="#" id="show" class="{{request()->routeIs('agregar-paciente', 'buscar-paciente') ? 'current' : ''}}">PACIENTES</a>
-                    <a href="{{ route('patient.create') }}" id="ocultar" class="{{request()->routeIs('patient.create') ? 'current' : ''}}">Agregar Paciente</a>
-                    <a href="{{ route('patient.index') }}" id="ocultar" class="{{request()->routeIs('patient.index') ? 'current' : ''}}">Ver Pacientes</a>
-                    <a href="#" id="showOs" class="{{request()->routeIs('agregar-obra-social', 'buscar-obra-social') ? 'current' : ''}}">OBRAS SOCIALES</a>
-                    <a href="{{ route('agregar-obra-social') }}" id="ocultarOs" class="{{request()->routeIs('agregar-obra-social') ? 'current' : ''}}">Agregar Obra Social</a>
-                    <a href="{{ route('buscar-obra-social') }}" id="ocultarOs" class="{{request()->routeIs('buscar-obra-social') ? 'current' : ''}}">Ver Obras Sociales</a>
+                    <a href="#" id="show" class="{{request()->routeIs('patient.create', 'patient.index') ? 'current' : ''}}">PACIENTES</a>
+                        <a href="{{ route('patient.index') }}" id="ocultar" class="{{request()->routeIs('patient.index') ? 'current' : ''}}">Ver Pacientes</a>
+                        <a href="{{ route('patient.create') }}" id="ocultar" class="{{request()->routeIs('patient.create') ? 'current' : ''}}">Agregar Paciente</a>
+                    <a href="#" id="showOs" class="{{request()->routeIs('os.index', 'os.create') ? 'current' : ''}}">OBRAS SOCIALES</a>
+                        <a href="{{ route('os.index') }}" id="ocultarOs" class="{{request()->routeIs('os.index') ? 'current' : ''}}">Ver Obras Sociales</a>
+                        <a href="{{ route('os.create') }}" id="ocultarOs" class="{{request()->routeIs('os.create') ? 'current' : ''}}">Agregar Obra Social</a>
                     <a href="#">CALENDARIO</a>
                     <a href="#" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">

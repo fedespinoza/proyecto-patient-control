@@ -15,10 +15,12 @@ class CreateWorkSocialsTable extends Migration
     {
         Schema::create('work_socials', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('direccion');
-            $table->string('iva');
-            $table->string('cond_venta');
+            $table->string('nombre')->nullable();
+            $table->string('cuit')->nullable();
+            $table->string('direccion')->nullable();
+            $table->string('iva')->nullable();
+            $table->string('cond_venta')->nullable();
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }
