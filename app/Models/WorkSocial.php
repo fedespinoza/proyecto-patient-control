@@ -9,7 +9,7 @@ class WorkSocial extends Model
 {
     use HasFactory;
 
-    public function patients(){
-        return $this->belongsTo('App\Models\Patient');
+    public function patient(){
+        return $this->hasMany('App\Models\Patient');
     }
 }

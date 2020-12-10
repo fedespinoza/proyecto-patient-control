@@ -10,7 +10,7 @@ class Patient extends Model
     use HasFactory;
 
     public function worksocial(){
-        return $this->hasMany('App\Models\WorkSocial');
+        return $this->belongsTo('App\Models\WorkSocial');
     }
 }
 

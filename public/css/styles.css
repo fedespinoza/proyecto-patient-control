@@ -325,32 +325,43 @@ nav a.currentDos:visited {
 
 /* PAGINA SHOW*/
 
-.contentShow{
-    width: 60%;
-    display: flex;
-}
+
 
 .tituloShow{
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
     font-size: 35px;
+    text-transform: uppercase;
 }
 
-.muestraDos{
-    margin-left: 30%;
+.contentShow{
+    background-color: #dfdfdf;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    border-radius: 15px;
+}
+
+span.spanShow{
+    color: red;
+    font-size: 16px;
+    display: block;
 }
 
 .muestraUno h2,
 .muestraDos h2{
     padding-top: 40px;
-    font-size: 26px;
+    font-size: 20px;
 }
 
-.diagnostico{
-    font-size: 26px;
-    padding-top: 20px;
-    width: 60%;
+.muestraUno h2{
+    padding-left: 30%;    
+}
+.muestraDos h2{
+    width: 100%;
+    padding-left: 10%;
 }
 
 .botones{
@@ -362,7 +373,7 @@ nav a.currentDos:visited {
 
 .botonEditar{
     padding: 10px 15px;
-    background-color: #E0A800;
+    background-color: #f7b901;
     border-radius: 5px;
     color: #000;
     text-decoration: none;
@@ -370,14 +381,14 @@ nav a.currentDos:visited {
 }
 
 .botonEditar:hover{
-    background-color: #b98b00;
+    background-color: #daa300;
     text-decoration: none;
     color: #000;
 }
 
 .botonEliminar{
     padding: 10px 15px;
-    background-color: #E0A800;
+    background-color: #f7b901;
     border-radius: 5px;
     color: #000;
     text-decoration: none;
@@ -386,7 +397,7 @@ nav a.currentDos:visited {
 }
 
 .botonEliminar:hover{
-    background-color: #b98b00;
+    background-color: #daa300;
     text-decoration: none;
     color: #000;
 }

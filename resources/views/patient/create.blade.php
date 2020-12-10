@@ -22,10 +22,10 @@
                     <input type="text" name="escuela" id="" placeholder="Escuela">
                 </div>
                 <div class="formCuartaLinea">
-                    <select name="id_obra" id="">
+                    <select name="obra_id" id="">
                         <option value="">-- Seleccionar --</option>
                         @foreach ($obra as $os)
-                            <option value="">{{$os->nombre}}</option>
+                    <option value="">{{$os->id}}- {{$os->nombre}}</option>
                         @endforeach
                     </select>
                     <input type="number" name="afiliado" id="" placeholder="N° Afiliado">

@@ -41,7 +41,7 @@ class SinglePatientController extends Controller
         $patient->escuela = $request->escuela;
         $patient->dni = $request->dni;
         // $patient->terapias = $request->terapias;
-        // $patient->id_obra = $request->id_obra;
+        $patient->obra_id = $request->obra_id;
         $patient->afiliado = $request->afiliado;
         $patient->diagnostico = $request->diagnostico;
 
@@ -72,7 +72,7 @@ class SinglePatientController extends Controller
         $pax->escuela = $request->escuela;
         $pax->dni = $request->dni;
         // $patient->terapias = $request->terapias;
-        // $pax->id_obra = $request->id_obra;
+        $pax->obra_id = $request->obra_id;
         $pax->afiliado = $request->afiliado;
         $pax->diagnostico = $request->diagnostico;
 

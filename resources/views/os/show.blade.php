@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Paciente - ' . $obra->nombre)
+@section('title', 'Obra Social - ' . $obra->nombre)
     
 @section('content')
     <div class="col-9 d-flex flex-column align-items-center">

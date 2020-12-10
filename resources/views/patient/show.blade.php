@@ -6,21 +6,23 @@
     <div class="col-9 d-flex flex-column align-items-center">
         <h2 class="tituloShow">Datos de {{$pax->nombre}}</h2>
 
-        <div class="contentShow">
+        <div class="contentShow d-flex justify-content-around">
             <div class="muestraUno d-flex flex-column">
-                <h2>Nombre: {{$pax->nombre}}</h2>
-                <h2>Teléfono: {{$pax->telefono}}</h2>
-                <h2>Nacimiento: {{$pax->nacimiento}}</h2>
-                <h2>Obra Social: {{$pax->obraSocial}}</h2>
+                <h2><span class="spanShow">Nombre:</span> {{$pax->nombre}}</h2>
+                <h2><span class="spanShow">ID:</span> {{$pax->id}}</h2>
+                <h2><span class="spanShow">Teléfono:</span> {{$pax->telefono}}</h2>
+                <h2><span class="spanShow">Nacimiento:</span> {{$pax->nacimiento}}</h2>
+                <h2><span class="spanShow">Obra Social:</span> {{$pax->obra_id}}</h2>
             </div>
             <div class="muestraDos d-flex flex-column">
-                <h2>Apellido: {{$pax->apellido}}</h2>
-                <h2>DNI: {{$pax->dni}}</h2>
-                <h2>Escuela: {{$pax->escuela}}</h2>      
-                <h2>Afiliado: {{$pax->afiliado}}</h2>
+                <h2><span class="spanShow">Apellido:</span> {{$pax->apellido}}</h2>
+                <h2><span class="spanShow">DNI:</span> {{$pax->dni}}</h2>
+                <h2><span class="spanShow">Escuela:</span> {{$pax->escuela}}</h2>      
+                <h2><span class="spanShow">Afiliado:</span> {{$pax->afiliado}}</h2>
+                <h2 class="diagnostico"><span class="spanShow">Diagnóstico:</span> {{$pax->diagnostico}}</h2>
             </div>
         </div>
-        <h2 class="diagnostico">Diagnóstico: {{$pax->diagnostico}}</h2>
+
         
 
         <div class="botones d-flex">
