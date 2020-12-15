@@ -33,7 +33,7 @@
         <div class="botones-top">
             <a href="{{ route('patient.create') }}" alt=""><img src="botones/btn1.png" alt="boton-cargar-paciente"></a>
             <a href="{{ route('os.create') }}" alt=""><img src="botones/btn2.png" alt="boton-obra-social"></a>
-            <a href="#" alt=""><img src="botones/btn3.png" alt="reuniones"></a>
+            <a href="{{ route('calendar.index')}}" alt=""><img src="botones/btn3.png" alt="reuniones"></a>
         </div>
         <div class="botones-bottom">
             <a href="{{route('patient.index')}}" alt=""><img src="botones/btn4.png" alt="buscar-paciente"></a>

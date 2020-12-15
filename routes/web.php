@@ -4,6 +4,7 @@ use App\Http\Controllers\AgregarObraSocialController;
 use App\Http\Controllers\AgregarPacienteController;
 use App\Http\Controllers\BuscarObraSocialController;
 use App\Http\Controllers\BuscarPacienteController;
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\SinglePatientController;
@@ -35,3 +36,4 @@ Route::get('paciente', PacienteController::class)->name('paciente')->middleware(
 
 Route::resource('patient', SinglePatientController::class)->middleware('auth');
 Route::resource('os', WorkSocialController::class)->middleware('auth');
+Route::resource('calendar', CalendarController::class)->middleware('auth');

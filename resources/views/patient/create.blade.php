@@ -15,7 +15,7 @@
                 </div>
                 <div class="formSegundaLinea">
                     <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de Nacimiento">
-                    <input type="number" name="telefono" placeholder="Teléfono">
+                    <input type="text" name="telefono" placeholder="Teléfono">
                 </div>
                 <div class="formTerceraLinea">
                     <input type="number" name="dni" id="" placeholder="DNI">
@@ -23,9 +23,9 @@
                 </div>
                 <div class="formCuartaLinea">
                     <select name="obra_id" id="">
-                        <option value="">-- Seleccionar --</option>
+                        <option value="" name="obra_id">-- Seleccionar --</option>
                         @foreach ($obra as $os)
-                    <option value="">{{$os->id}}- {{$os->nombre}}</option>
+                    <option value="{{$os->id}}" name="obra_id">{{$os->id}}- {{$os->nombre}}</option>
                         @endforeach
                     </select>
                     <input type="number" name="afiliado" id="" placeholder="N° Afiliado">

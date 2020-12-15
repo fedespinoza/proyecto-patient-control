@@ -441,4 +441,37 @@ span.spanShow{
     padding: 0;
 }
 
+#calendar{
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+button.btn.btn-primary{
+    margin-top: 100px;
+}
+
+.page-link{
+    color: #000!important;
+}
+
+.copy{
+    cursor: pointer;
+}
+
+/* OBRA SHOW*/
+
+.muestraUnoObra h2,
+.muestraDosObra h2{
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+.muestraUnoObra h2{
+    padding-left: 0%;    
+}
+.muestraDosObra h2{
+    width: 100%;
+    padding-left: 20%;
+}
+
 

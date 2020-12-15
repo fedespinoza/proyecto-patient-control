@@ -23,7 +23,12 @@
                     <input type="text" name="escuela" placeholder="escuela" value="{{$pax->escuela}}">
                 </div>
                 <div class="formCuartaLinea">
-                    <input type="text" name="obraSocial" id="" placeholder="Obra Social" value="{{$pax->obraSocial}}">
+                    <select name="obra_id" id="">
+                        <option value="{{$pax->obra_id}}"></option>
+                        @foreach ($obra as $os)
+                            <option value="{{$os->id}}">{{$os->id}}- {{$os->nombre}}</option>
+                        @endforeach
+                    </select>
                     <input type="number" name="afiliado" id="" placeholder="N° Afiliado" value="{{$pax->afiliado}}"></div>
                 <div class="formQuintaLinea">
                     <textarea name="diagnostico" id="" cols="30" rows="10" placeholder="Diagnostico">{{$pax->diagnostico}}</textarea>

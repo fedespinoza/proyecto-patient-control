@@ -11,7 +11,7 @@
                     @csrf
                     <div class="formOsPrimeraLinea">
                         <input type="text" name="nombre" id="" placeholder="Obra Social">
-                        <input type="number" name="cuit" id="" placeholder="CUIT">
+                        <input type="text" name="cuit" id="" placeholder="CUIT">
                     </div>
                     <div class="formOsSegundaLinea">
                         <input type="text" name="direccion" id="" placeholder="Dirección">

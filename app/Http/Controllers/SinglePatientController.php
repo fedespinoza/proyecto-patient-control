@@ -42,6 +42,8 @@ class SinglePatientController extends Controller
         $patient->dni = $request->dni;
         // $patient->terapias = $request->terapias;
         $patient->obra_id = $request->obra_id;
+        $worksocial = WorkSocial::find($request->obra_id);
+        $patient->worksocial()->associate($worksocial);
         $patient->afiliado = $request->afiliado;
         $patient->diagnostico = $request->diagnostico;
 
@@ -58,8 +60,8 @@ class SinglePatientController extends Controller
 
     public function edit($id){
         $pax = Patient::find($id);
-
-        return view("patient/edit", compact('pax'));
+        $obra = WorkSocial::all();
+        return view("patient/edit", compact('pax', 'obra'));
     }
 
     public function update(Request $request, $id){
